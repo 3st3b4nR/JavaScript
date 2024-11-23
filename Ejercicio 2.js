@@ -160,3 +160,82 @@ Ver en que casos se puede usar cada uno o cuando usar uno de los condicionales a
 --Los operadores ternarios son un tipo más compacto de if, else, else if pero se usan preferiblemente cuando
 la condición es simple y no tiene más derivaciones de la misma
 */
+
+
+
+/*
+TIPOS DE BUCLES (FOR, WHILE, DO FOR)
+
+FOR(bucle definido)
+Se usa cuando conoces de antemano el número de iteraciones.
+
+SINTAXIS:
+for (inicialización; condición; actualización) {
+  // Código a ejecutar
+}
+*/
+
+for (let i = 0; i < 5; i++) {
+  console.log(`Iteración número: ${i}`);
+}
+// Salida: 0, 1, 2, 3, 4
+//inicialización: Se inicializa la variable de control (en este caso, let i = 0).
+//condición: Evalúa si el bucle debe continuar (mientras i < 5).
+//actualización: Cambia el valor de la variable de control (aumenta i en 1).
+
+
+/*
+WHILE (bucle indefinido)
+Se usa cuando no sabes cuántas iteraciones necesitas, pero sabes la condición.
+
+SINTAXIS:
+while (condición) {
+  // Código a ejecutar
+}
+*/
+
+let contador = 0;
+
+while (contador < 3) {
+  console.log(`Contador: ${contador}`);
+  contador++;
+}
+// Salida: 0, 1, 2
+//condición: Evalúa si el bucle debe continuar (contador < 3).
+//Si la condición nunca se cumple, el bucle no se ejecuta.
+
+
+/*
+DO...WHILE (bucle que siempre ejecuta al menos una vez)
+Es similar a while, pero garantiza que el código dentro del bloque se ejecute al menos una vez.
+
+SINTAXIS:
+do {
+  // Código a ejecutar
+} while (condición);
+*/
+
+let contador = 5;
+
+do {
+  console.log(`Contador: ${contador}`);
+  contador++;
+} while (contador < 3);
+// Salida: 5 (el código se ejecuta al menos una vez)
+
+
+//-------------------------BUCLES ADICIONALES------------------------//
+/*
+for...in (para recorrer propiedades de un objeto)
+Se utiliza para iterar sobre las propiedades (claves) de un objeto.
+*/
+
+let persona = { nombre: "Juan", edad: 25, ciudad: "Madrid" };
+
+for (let clave in persona) {
+  console.log(`${clave}: ${persona[clave]}`);
+}
+// Salida:
+// nombre: Juan
+// edad: 25
+// ciudad: Madrid
