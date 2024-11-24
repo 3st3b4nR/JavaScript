@@ -438,3 +438,114 @@ Cuando la función sea expresada se le pone un ";" al final ya que esta, por as�
 También cuando se va a llamar a la función.
 */
 
+/*
+ARRAYS
+Un array es una estructura de datos que almacena una colección de elementos (valores o referencias) en un único lugar. 
+Los elementos se ordenan por índices que comienzan desde 0.
+*/
+
+//Ejemplo: 
+
+let frutas = ["manzana", "banana", "naranja"];
+// Índices:      0          1          2
+
+//------------¿Cómo crear un Array?----------------//
+
+//Notación literal:
+let numeros = [1, 2, 3, 4, 5];
+
+//Constructor Array:
+let colores = new Array("rojo", "verde", "azul");
+
+/*
+MÉTODOS BÁSICOS DE ARRAYS
+
+push(): Añadir un elemento al final
+Este método agrega uno o más elementos al final del array.
+*/
+
+let frutas = ["manzana", "banana"];
+frutas.push("naranja");
+console.log(frutas); // ["manzana", "banana", "naranja"]
+
+/*
+pop(): Eliminar el último elemento
+Este método elimina el último elemento del array y lo devuelve.
+*/
+
+let frutas = ["manzana", "banana", "naranja"];
+let eliminado = frutas.pop();
+console.log(frutas); // ["manzana", "banana"]
+console.log(eliminado); // "naranja"
+
+/*
+shift(): Eliminar el primer elemento
+Este método elimina el primer elemento del array y desplaza los índices hacia la izquierda. Devuelve el elemento eliminado.
+*/
+
+let frutas = ["manzana", "banana", "naranja"];
+let eliminado = frutas.shift();
+console.log(frutas); // ["banana", "naranja"]
+console.log(eliminado); // "manzana"
+
+/*
+unshift(): Añadir un elemento al inicio
+Este método agrega uno o más elementos al inicio del array.
+*/
+
+let frutas = ["banana", "naranja"];
+frutas.unshift("manzana");
+console.log(frutas); // ["manzana", "banana", "naranja"]
+
+/*
+PROPIEDAD LENGTH
+El array tiene una propiedad llamada length que devuelve el número de elementos.
+*/
+
+let frutas = ["manzana", "banana", "naranja"];
+console.log(frutas.length); // 3
+
+/*
+ACCESO POR ÍNDICE
+Puedes acceder a los elementos de un array usando sus índices.
+*/
+
+let frutas = ["manzana", "banana", "naranja"];
+console.log(frutas[0]); // "manzana"
+console.log(frutas[2]); // "naranja"
+
+
+//También se pueden modificar los elementos directamente:
+
+frutas[1] = "fresa";
+console.log(frutas); // ["manzana", "fresa", "naranja"]
+
+
+//--------------------------------Ejericios---------------------------//
+
+/*
+Crear un array:
+Crea un array con 5 números e imprímelo en consola.
+*/
+
+let arreglo=[10, 20, 30, 40, 50];
+console.log(arreglo);
+
+/*
+Manipulación básica:
+Usa push() para añadir un número al final del array y unshift() para añadir uno al inicio.
+*/
+
+arreglo.push(60);
+console.log(arreglo);
+arreglo.unshift(0);
+console.log(arreglo);
+
+//Luego, usa pop() y shift() para eliminar el último y primer elemento respectivamente.
+//Imprime el array en cada paso para ver los cambios.
+
+arreglo.pop();
+console.log(arreglo);
+arreglo.shift();
+console.log(arreglo);
+
