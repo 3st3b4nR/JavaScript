@@ -320,3 +320,121 @@ do {
 } while (numero <= 8);   //Condición del while
 
 console.log("¡Se generó un número mayor a 8! Fin del bucle.");   //Lo que pasa cuando se cumple con la condición del while
+
+
+/*
+FUNCIONES EN JAVASCRIPT
+
+FUNCIONES DECLARATIVAS
+Las funciones declarativas son las que se crean usando la palabra clave function seguida del nombre de la función.
+Este tipo de función se carga en memoria antes de que se ejecute el código
+
+SINTAXIS
+function nombreDeLaFuncion() {
+  // Código que ejecuta la función
+}
+*/
+
+function saludar() {
+  console.log("¡Hola, mundo!");
+}
+
+saludar(); // ¡Hola, mundo!
+
+/*
+FUNCIONES EXPRESADAS
+Las funciones expresadas son aquellas que se asignan a una variable. Estas funciones no tienen nombre (funciones anónimas) o pueden tenerlo. 
+A diferencia de las declarativas, no están disponibles antes de su definición debido a que no son hoisted.
+
+SINTAXIS
+const nombreDeLaVariable = function() {
+  // Código de la función
+};
+*/
+
+const despedir = function() {
+  console.log("¡Adiós, mundo!");
+};
+
+despedir(); // ¡Adiós, mundo!
+
+/*
+PARÁMETROS Y ARGUMENTOS
+Los parámetros son los nombres de las variables que defines en la función para recibir datos. Los argumentos son los valores que pasas a la función cuando la llamas.
+*/
+
+function sumar(a, b) {
+  // `a` y `b` son parámetros
+  return a + b;
+}
+
+let resultado = sumar(5, 3); // 5 y 3 son argumentos
+console.log(resultado); // 8
+
+/*
+VALORES DE RETORNO (RETURN)
+El valor de retorno es el resultado que devuelve la función al terminar su ejecución. 
+Esto se hace con la palabra clave return. Una función puede devolver cualquier tipo de dato (número, cadena, objeto, etc.).
+
+SINTAXIS
+function nombreDeLaFuncion() {
+  return valor; // Devuelve un valor
+}
+*/
+
+function obtenerNombreCompleto(nombre, apellido) {
+  return `${nombre} ${apellido}`;
+}
+
+let nombreCompleto = obtenerNombreCompleto("Ana", "Pérez");
+console.log(nombreCompleto); // Ana Pérez
+
+
+//---------------------NOTA ADICIONAL-----------------------//
+/*
+Para funciones más compactas y modernas, puedes usar funciones flecha (arrow functions). Estas son equivalentes a las expresadas, pero más concisas.
+*/
+const multiplicar = (a, b) => a * b;
+
+console.log(multiplicar(4, 5)); // 20
+
+
+//------------------------Ejercicios-----------------------//
+/*
+Funciones declarativas:
+Crea una función llamada saludar que tome un parámetro nombre y muestre un saludo en consola.
+*/
+
+function saludar(nombre)
+{console.log(`Hola ${nombre}`);}
+
+saludar("Esteban"); 
+
+/*
+Funciones expresadas:
+Escribe una función expresada que tome dos números y devuelva su suma.
+*/
+
+let suma=function(x,y)
+{console.log(`La suma es ${x+y}`);};
+
+suma(1,2);
+
+/*
+Parámetros y valores de retorno:
+Crea una función que tome un número y devuelva su cuadrado.
+*/
+
+const cuadrado= function(numero)
+{return(numero**2);};
+
+console.log(`El cuadrado de 4 es ${cuadrado(4)}`);
+
+
+//-------------------------NOTA------------------------//
+/*
+Cuando la función sea expresada se le pone un ";" al final ya que esta, por así decirlo, es una variable.
+
+También cuando se va a llamar a la función.
+*/
+
