@@ -226,7 +226,7 @@ do {
 
 //-------------------------BUCLES ADICIONALES------------------------//
 /*
-for...in (para recorrer propiedades de un objeto)
+FOR...IN (para recorrer propiedades de un objeto)
 Se utiliza para iterar sobre las propiedades (claves) de un objeto.
 */
 
@@ -239,3 +239,84 @@ for (let clave in persona) {
 // nombre: Juan
 // edad: 25
 // ciudad: Madrid
+
+/*
+FOR...OF (para recorrer elementos de un array o iterable)
+Se usa para recorrer los valores de un array, string o cualquier estructura iterable.
+*/
+
+//Ejemplo con un Array
+let numeros = [10, 20, 30];
+
+for (let numero of numeros) {
+  console.log(numero);
+}
+// Salida: 10, 20, 30
+
+//Ejemplo con un string
+let palabra = "Hola";
+
+for (let letra of palabra) {
+  console.log(letra);
+}
+// Salida: H, o, l, a
+
+//----------------CONTROL DEL FLUJO DENTRO DE UN BUCLE---------------------//
+
+//break: Detiene el bucle inmediatamente.
+for (let i = 0; i < 5; i++) {
+  if (i === 3) break;
+  console.log(i);
+}
+// Salida: 0, 1, 2
+
+//continue: Salta a la siguiente iteración del bucle.
+for (let i = 0; i < 5; i++) {
+  if (i === 2) continue;
+  console.log(i);
+}
+// Salida: 0, 1, 3, 4
+
+
+//-----------------------Ejercicios---------------------//
+/*
+Bucle for:
+Crea un bucle for que imprima los números del 1 al 5 en consola.
+*/
+
+for(let i=1; i<=5; i++){   //Condiciones
+  console.log(i);   //Imprime 1 2 3 4 5
+}
+
+//Modifica el bucle para que imprima solo los números pares del 1 al 10.
+for (let i=2; i<=10; i++){
+  if(i%2!=0)continue;
+  console.log(i)
+}
+
+/*
+Bucle while:
+Crea un bucle while que imprima números del 1 al 3 en consola.
+*/
+
+let numero = 1;
+
+while (numero <= 3) {   //Condición
+  console.log(numero);   // Imprime el numero
+  numero++;   //Después de imprimir le suma 1 al número para que siga avanzando hasta que coja la condición
+}
+
+/*
+Bucle do...while:
+Escribe un bucle do...while que imprima un número aleatorio entre 1 y 10 hasta que obtenga un número mayor a 8.
+*/
+
+let numero;
+
+do {
+  // Generar un número aleatorio entre 1 y 10
+  numero = Math.floor(Math.random() * 10) + 1;   //El número es un random entre 0 y 1 pero necesito que sea de 1 a 10, por eso multiplico por 10 y l3 sumo 1 al final
+  console.log(`Número generado: ${numero}`);   //Me aroja el número random
+} while (numero <= 8);   //Condición del while
+
+console.log("¡Se generó un número mayor a 8! Fin del bucle.");   //Lo que pasa cuando se cumple con la condición del while
