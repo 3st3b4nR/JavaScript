@@ -549,3 +549,107 @@ console.log(arreglo);
 arreglo.shift();
 console.log(arreglo);
 
+
+/*
+OBJETOS BÁSICOS EN JAVASCRIPT
+Un objeto en JavaScript es una colección de propiedades y métodos, donde cada propiedad es un par clave-valor.
+Los objetos te permiten agrupar datos y funciones relacionadas para organizarlos mejor.
+
+Crear un objeto
+Puedes crear un objeto en JavaScript de varias maneras, pero la más común es usar notación literal.
+*/
+//Ejemplo:
+let persona = {
+  nombre: "Ana",
+  edad: 30,
+  ciudad: "Madrid"
+};
+
+/*
+Acceder a las propiedades
+*/
+
+//Notación de punto (dot notation):
+console.log(persona.nombre); // "Ana"
+console.log(persona.edad);   // 30
+
+//Notación de corchetes (bracket notation):
+console.log(persona["ciudad"]); // "Madrid"
+
+//La notación de corchetes es útil si el nombre de la propiedad es dinámico o contiene caracteres no válidos para la notación de punto.
+
+/*
+ Modificar propiedades
+Puedes actualizar el valor de una propiedad existente o agregar nuevas propiedades.
+*/
+
+//Actualizar propiedades:
+persona.edad = 31;
+console.log(persona.edad); // 31
+
+//Agregar nuevas propiedades:
+persona.profesion = "Ingeniera";
+console.log(persona.profesion); // "Ingeniera"
+
+/*
+Métodos en objetos
+Un método es una función que pertenece a un objeto. Se define igual que una propiedad, pero su valor es una función.
+*/
+
+let persona = {
+  nombre: "Ana",
+  saludar: function() {
+    console.log(`¡Hola! Me llamo ${this.nombre}`);
+  }
+};
+
+persona.saludar(); // ¡Hola! Me llamo Ana
+
+//this: Hace referencia al objeto actual (persona).
+
+/*
+Eliminar propiedades
+Puedes eliminar una propiedad de un objeto usando la palabra clave delete.
+*/
+
+delete persona.edad;
+console.log(persona); // { nombre: "Ana", ciudad: "Madrid" }
+
+/*
+Recorrer las propiedades de un objeto
+Puedes usar el bucle for...in para iterar sobre las propiedades de un objeto.
+*/
+let persona = {
+  nombre: "Ana",
+  edad: 30,
+  ciudad: "Madrid"
+};
+
+for (let clave in persona) {
+  console.log(`${clave}: ${persona[clave]}`);
+}
+// Salida:
+// nombre: Ana
+// edad: 30
+// ciudad: Madrid
+
+//-----------------------------Ejercicios------------------------//
+
+/*
+Crear un objeto:
+Crea un objeto llamado persona con propiedades como nombre, edad y ocupacion.
+Imprime en consola cada una de las propiedades del objeto.
+*/
+let persona={nombre:"Esteban", edad:17, ocupacion:"estudiante"};
+console.log(persona);
+
+/*
+Añadir y modificar propiedades:
+Añade una nueva propiedad pais al objeto persona.
+Modifica la propiedad edad para aumentar en 1 y vuelve a imprimir el objeto.
+*/
+
+persona.pais="colombia";
+persona.edad=(persona.edad+1)
+
+
